@@ -1,9 +1,9 @@
 class nullmailer::package {
-  package { $nullmailer::package:
-    ensure => present,
+  package { $nullmailer::params::package:
+    ensure => 'present',
   }
 
-  package { $nullmailer::absentpackages:
-    ensure => absent,
+  package { $nullmailer::params::absentpackages:
+    ensure => 'purged',
   }
 }
